@@ -32,6 +32,10 @@ while (estaRodando)
 			Console.WriteLine("Deu ruim!!!");
 			throw;
 		}
+		finally
+		{
+			Console.WriteLine();
+		}
 
 	} while (!entradaValida);
 
@@ -46,6 +50,11 @@ while (estaRodando)
 bool ehNumeroPrimo(int numero)
 {
 	int totalDeDivisoesExatas = 0;
+
+	if (numero is 0 or 1 or -1)
+	{
+		return false;
+	}
 
 	for (int i = 1; i <= numero; i++)
 	{
