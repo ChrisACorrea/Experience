@@ -1,10 +1,42 @@
 ﻿using System;
 
-Console.Write("Digite um número: ");
-int numeroDeEntrada = int.Parse(Console.ReadLine());
+const string TITULO = "Verificador de Números Primos"; 
+Console.Title = TITULO;	
+
+bool entradaValida = false;
+int numeroDeEntrada = 0;
+escreverTitulo();
+
+do
+{
+	Console.Write("Digite um número: ");
+
+	try
+	{
+		numeroDeEntrada = int.Parse(Console.ReadLine());
+		entradaValida = true;
+	}
+	catch (FormatException)
+	{
+		Console.WriteLine("O valor inserido deve ser um número e um número inteiro. Também não pode ser vazio.");
+	}
+	catch (OverflowException)
+	{
+		Console.WriteLine("Ops!!! Esse é um valor muito alto. Tente com um menor.");
+	}
+	catch (Exception)
+	{
+		Console.WriteLine("Deu ruim!!!");
+		throw;
+	}
+
+} while (!entradaValida);
+
 bool ehPrimo = ehNumeroPrimo(numeroDeEntrada);
 
 Console.WriteLine($"O número {numeroDeEntrada}{(!ehPrimo ? " não": "")} é primo");
+Console.WriteLine();
+Console.WriteLine("Pressione qualquer tecla para sair.");
 Console.ReadKey();
 
 bool ehNumeroPrimo(int numero)
@@ -27,4 +59,12 @@ bool ehNumeroPrimo(int numero)
 	}
 
 	return true;
+}
+
+void escreverTitulo()
+{
+	Console.WriteLine("#################################");
+	Console.WriteLine($"# {TITULO} #");
+	Console.WriteLine("#################################");
+	Console.WriteLine();
 }
