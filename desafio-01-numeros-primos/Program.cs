@@ -1,43 +1,47 @@
 ﻿using System;
 
 const string TITULO = "Verificador de Números Primos"; 
-Console.Title = TITULO;	
+Console.Title = TITULO;
+bool estaRodando = true;
 
-bool entradaValida = false;
-int numeroDeEntrada = 0;
-escreverTitulo();
-
-do
+while (estaRodando)
 {
-	Console.Write("Digite um número: ");
+	bool entradaValida = false;
+	int numeroDeEntrada = 0;
+	escreverTitulo();
 
-	try
+	do
 	{
-		numeroDeEntrada = int.Parse(Console.ReadLine());
-		entradaValida = true;
-	}
-	catch (FormatException)
-	{
-		Console.WriteLine("O valor inserido deve ser um número e um número inteiro. Também não pode ser vazio.");
-	}
-	catch (OverflowException)
-	{
-		Console.WriteLine("Ops!!! Esse é um valor muito alto. Tente com um menor.");
-	}
-	catch (Exception)
-	{
-		Console.WriteLine("Deu ruim!!!");
-		throw;
-	}
+		Console.Write("Digite um número: ");
 
-} while (!entradaValida);
+		try
+		{
+			numeroDeEntrada = int.Parse(Console.ReadLine());
+			entradaValida = true;
+		}
+		catch (FormatException)
+		{
+			Console.WriteLine("O valor inserido deve ser um número e um número inteiro. Também não pode ser vazio.");
+		}
+		catch (OverflowException)
+		{
+			Console.WriteLine("Ops!!! Esse é um valor muito alto. Tente com um menor.");
+		}
+		catch (Exception)
+		{
+			Console.WriteLine("Deu ruim!!!");
+			throw;
+		}
 
-bool ehPrimo = ehNumeroPrimo(numeroDeEntrada);
+	} while (!entradaValida);
 
-Console.WriteLine($"O número {numeroDeEntrada}{(!ehPrimo ? " não": "")} é primo");
-Console.WriteLine();
-Console.WriteLine("Pressione qualquer tecla para sair.");
-Console.ReadKey();
+	bool ehPrimo = ehNumeroPrimo(numeroDeEntrada);
+
+	Console.WriteLine($"O número {numeroDeEntrada}{(!ehPrimo ? " não": "")} é primo");
+	Console.WriteLine();
+	questionarSaida();
+	
+}
 
 bool ehNumeroPrimo(int numero)
 {
@@ -67,4 +71,17 @@ void escreverTitulo()
 	Console.WriteLine($"# {TITULO} #");
 	Console.WriteLine("#################################");
 	Console.WriteLine();
+}
+
+void questionarSaida()
+{
+	Console.WriteLine("Pressione 'ESC' para sair do programa ou qualquer outra tecla para realizar outra verificação.");
+	var teclaPressionada = Console.ReadKey();
+
+	if (teclaPressionada.Key.Equals(ConsoleKey.Escape))
+	{
+		estaRodando = false;
+	}
+
+	Console.Clear();
 }
