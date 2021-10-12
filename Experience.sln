@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "desafio-01-numeros-primos",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "desafio-02-fibonacci", "desafio-02-fibonacci\desafio-02-fibonacci.csproj", "{F8E08FE4-121E-4CAF-BC16-577918DA82FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "desafio-03-piramides", "desafio-03-piramides\desafio-03-piramides.csproj", "{C39A1968-AF8A-4766-A3EB-E4457B218E0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "desafio-03-piramides", "desafio-03-piramides\desafio-03-piramides.csproj", "{C39A1968-AF8A-4766-A3EB-E4457B218E0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "desafio-04-mapa_do_mario", "desafio-04-mapa_do_mario\desafio-04-mapa_do_mario.csproj", "{044608CE-0A53-47B9-B151-EE06DE76E95C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C39A1968-AF8A-4766-A3EB-E4457B218E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C39A1968-AF8A-4766-A3EB-E4457B218E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C39A1968-AF8A-4766-A3EB-E4457B218E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{044608CE-0A53-47B9-B151-EE06DE76E95C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{044608CE-0A53-47B9-B151-EE06DE76E95C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{044608CE-0A53-47B9-B151-EE06DE76E95C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{044608CE-0A53-47B9-B151-EE06DE76E95C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
