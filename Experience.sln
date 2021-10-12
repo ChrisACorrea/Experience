@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "desafio-01-numeros-primos", "desafio-01-numeros-primos\desafio-01-numeros-primos.csproj", "{92DB96D0-C6DA-4707-B108-28C57E85A815}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "desafio-02-fibonacci", "desafio-02-fibonacci\desafio-02-fibonacci.csproj", "{F8E08FE4-121E-4CAF-BC16-577918DA82FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "desafio-02-fibonacci", "desafio-02-fibonacci\desafio-02-fibonacci.csproj", "{F8E08FE4-121E-4CAF-BC16-577918DA82FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "desafio-03-piramides", "desafio-03-piramides\desafio-03-piramides.csproj", "{C39A1968-AF8A-4766-A3EB-E4457B218E0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F8E08FE4-121E-4CAF-BC16-577918DA82FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8E08FE4-121E-4CAF-BC16-577918DA82FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8E08FE4-121E-4CAF-BC16-577918DA82FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C39A1968-AF8A-4766-A3EB-E4457B218E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C39A1968-AF8A-4766-A3EB-E4457B218E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C39A1968-AF8A-4766-A3EB-E4457B218E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C39A1968-AF8A-4766-A3EB-E4457B218E0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
